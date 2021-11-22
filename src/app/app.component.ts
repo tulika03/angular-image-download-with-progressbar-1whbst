@@ -16,7 +16,7 @@ export class AppComponent {
   imageSrc: SafeUrl;
   imageName = 'myCustomImageName.jpg';
 
-    downloadFile() {
+  downloadFile() {
     return this.http
       .get('http://localhost:3000/api/admin/sku/cover_page/2', {
         responseType: 'blob',
@@ -28,7 +28,7 @@ export class AppComponent {
       })
       .subscribe((data) => {
         if (data && data != undefined && data != null) {
-          saveAs(data, 'muimage.jpg');
+          saveAs(data, 'myimage.jpg');
         }
       });
   }
