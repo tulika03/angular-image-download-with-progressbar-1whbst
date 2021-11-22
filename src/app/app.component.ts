@@ -16,28 +16,7 @@ export class AppComponent {
   imageSrc: SafeUrl;
   imageName = 'myCustomImageName.jpg';
 
-  loadImage() {
-    //   this.imageSrc = '';
-    //   this.http
-    //     .get(this.imageUrl, {
-    //       responseType: 'blob',
-    //       reportProgress: true,
-    //       observe: 'events',
-    //     })
-    //     .subscribe((event) => {
-    //       if (event.type === HttpEventType.DownloadProgress) {
-    //         this.percentDone = Math.round((100 * event.loaded) / event.total);
-    //       }
-    //       if (event.type === HttpEventType.Response) {
-    //         this.imageSrc = this.sanitizer.bypassSecurityTrustUrl(
-    //           URL.createObjectURL(event['body'])
-    //         );
-    //       }
-    //     });
-    //this.downloadFile()
-  }
-
-  downloadFile() {
+    downloadFile() {
     return this.http
       .get('http://localhost:3000/api/admin/sku/cover_page/2', {
         responseType: 'blob',
