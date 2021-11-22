@@ -1,0 +1,15 @@
+<h2>Angular: Image Download with Progress Bar</h2>
+<p>
+  Please choose an image url<br />(the image server has to use HTTPS and to
+  allow CORS):
+</p>
+<input id="imageUrlInput" [(ngModel)]="imageUrl" />
+<button (click)="downloadFile()">Load Image</button>
+<p>To watch the upload progress please disable your browser's cache.</p>
+<progress [value]="percentDone" max="100"></progress>
+<div *ngIf="imageSrc">
+  <!-- <img crossOrigin="" [src]="imageSrc" /> -->
+  <!-- <span>Please choose a name for saving:</span> -->
+  <!-- <input id="imageNameInput" [(ngModel)]="imageName" /> -->
+  <a [href]="imageSrc" [download]="imageName">Save Image</a>
+</div>

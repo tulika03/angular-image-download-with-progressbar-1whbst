@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+progress, #imageUrlInput, img {
+  width: 500px;
+}
+
+#imageUrlInput {
+  font-size: 10px;
+}
+
+button, img {
+  display: block;
+  margin: 20px 0;
+}
+
+#imageNameInput {
+  margin: 0 10px;
+}
+
